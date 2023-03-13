@@ -3,13 +3,11 @@ import DemoApp from './components/DemoApp.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
+  <main>
     <div class="wrapper">
-      <DemoApp />
+      <DemoApp :center="[0, 0]"/>
     </div>
-  </header>
+  </main>
 
 </template>
 
