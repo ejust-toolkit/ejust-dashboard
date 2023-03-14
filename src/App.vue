@@ -1,41 +1,30 @@
 <script setup lang="ts">
-import DemoApp from './components/DemoApp.vue'
+import BaseMapLayer from './components/BaseMapLayer.vue'
 </script>
 
 <template>
-  <main>
-    <div class="wrapper">
-      <DemoApp :center="[0, 0]"/>
-    </div>
-  </main>
+<v-app>
+  <v-navigation-drawer
+      model-value
+      class="pt-4"
+      color="grey-lighten-3"
+      rail
+    >
 
+    <v-icon x-large> mdi-cog</v-icon>
+      <v-avatar
+        v-for="n in 6"
+        :key="n"
+        :color="`grey-${n === 1 ? 'darken' : 'lighten'}-1`"
+        :size="n === 1 ? 36 : 20"
+        class="d-block text-center mx-auto mb-9"
+      ></v-avatar>
+  </v-navigation-drawer>
+  <v-main>
+    <BaseMapLayer :center="[90, 90]" :zoom="2" />
+  </v-main>
+</v-app>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
