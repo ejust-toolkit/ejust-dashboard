@@ -20,10 +20,7 @@ import BaseMapLayer from './components/BaseMapLayer.vue'
       ></v-avatar>
   </v-navigation-drawer>
   <v-main>
-    <BaseMapLayer :center="[90, 90]" :zoom="2" />
+    <BaseMapLayer :center="[-87.6372, 41.8789]" :zoom="7" :projection="'EPSG:4326'" :rotation="0"/>
   </v-main>
 </v-app>
 </template>
-
-<style scoped>
-</style>
