@@ -11,7 +11,6 @@ import BaseMapLayer from './components/BaseMapLayer.vue'
       rail
     >
 
-    <v-icon x-large> mdi-cog</v-icon>
       <v-avatar
         v-for="n in 6"
         :key="n"
